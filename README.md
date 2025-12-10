@@ -1,3 +1,3 @@
 Sumário Executivo Online
 
-https://lucianofs.github.iosumarioexecutivo/
+https://lucianofs.github.io/sumarioexecutivo/
