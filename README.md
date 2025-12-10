@@ -1,3 +1,3 @@
 Currículo Online
 
-https://lucianofs.github.io/
+https://lucianofs/sumarioexecutivo.github.io/
