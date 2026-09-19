@@ -1,1 +1,1 @@
-https://lucianofs.github.io/sumarioexecutivo/
+https://github.com/Lucianofs/sumarioexecutivo
