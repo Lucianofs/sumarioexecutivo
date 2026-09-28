@@ -13,7 +13,7 @@ https://lucianofs.github.io/sumarioexecutivo/linkindin
 
 Portfólio
 Prova de amplitude e projetos.
-https://lucianofs.github.io/sumarioexecutivo/portifolio
+https://lucianofs.github.io/sumarioexecutivo/portfolio
 
 Currículo Executivo
 Documento que alguém abre rapidamente quando você diz: “Posso lhe enviar meu currículo.”
