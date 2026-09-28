@@ -1,0 +1,404 @@
+
+
+<fsWrite>
+<path>luciano.jpg</path>
+<contents>
+[BINARY_IMAGE_DATA_FROM_USER_UPLOAD]
+</contents>
+</fsWrite>
+
+<fsWrite>
+<path>index.html</path>
+<contents>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Francisco — Currículo Executivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.4;
+            font-size: 10pt;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 32%;
+            background-color: #f8f9fa;
+            padding: 25px 20px;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .profile-photo {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto 15px;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 11pt;
+            color: #1a3a5c;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            margin-top: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar h2:first-of-type {
+            margin-top: 10px;
+        }
+
+        .sidebar p, .sidebar li {
+            font-size: 9pt;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .sidebar ul {
+            list-style-type: disc;
+            padding-left: 18px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 3px;
+        }
+
+        .contact-item {
+            margin-bottom: 6px;
+            font-size: 9pt;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #1a3a5c;
+            font-size: 8.5pt;
+        }
+
+        .contact-item span {
+            color: #444;
+            word-break: break-all;
+        }
+
+        /* Main Content */
+        .main {
+            width: 68%;
+            padding: 25px 30px;
+        }
+
+        .header-name {
+            margin-bottom: 5px;
+        }
+
+        .header-name h1 {
+            font-size: 22pt;
+            color: #1a3a5c;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .header-title {
+            font-size: 10pt;
+            color: #1a3a5c;
+            font-weight: 600;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-subtitle {
+            font-size: 9pt;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .profile-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a3a5c;
+            padding: 10px 15px;
+            margin-bottom: 18px;
+            font-size: 9.5pt;
+            color: #444;
+        }
+
+        .main h2 {
+            font-size: 12pt;
+            color: #1a3a5c;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            margin-top: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .main h2:first-of-type {
+            margin-top: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .experience-item h3 {
+            font-size: 10pt;
+            color: #1a3a5c;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .experience-item .role {
+            font-size: 9pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .experience-item p {
+            font-size: 9pt;
+            color: #444;
+        }
+
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a3a5c;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            font-size: 9.5pt;
+            color: #444;
+        }
+
+        .highlight-box strong {
+            color: #1a3a5c;
+        }
+
+        .contribute-section p {
+            font-size: 9pt;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .contribute-section strong {
+            color: #1a3a5c;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 8pt;
+            color: #888;
+            font-style: italic;
+            border-top: 1px solid #e9ecef;
+            padding-top: 8px;
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1a3a5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .print-btn:hover {
+            background-color: #2c5282;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                page-break-after: avoid;
+            }
+
+            .print-btn {
+                display: none !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">
+        ️ Imprimir / Gerar PDF
+    </button>
+
+    <div class="page">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="luciano.jpg" alt="Luciano Francisco" class="profile-photo">
+
+            <h2>Resumo Executivo</h2>
+            <p>Profissional multidisciplinar com formação em Sistemas de Informação e experiência em tecnologia, educação, inteligência artificial, dados, projetos, marketing, comunicação e políticas públicas. Atua de forma transversal, conectando conhecimento, pessoas, tecnologia e estratégia para desenvolver soluções em diferentes contextos.</p>
+            <p style="margin-top: 6px;">Também atua com palestras, produção de conteúdo e desenvolvimento humano, adaptando sua experiência às necessidades de empresas, instituições, educação, setor público e projetos individuais.</p>
+
+            <h2>Formação</h2>
+            <p><strong>2004–2008</strong> — Bacharel em Sistemas de Informação</p>
+            <p><strong>1994–1997</strong> — Técnico em Processamento de Dados</p>
+            <p><strong>2013–2022</strong> — Formação complementar em terapias holísticas, inteligência emocional, marketing digital, Storytelling, PNL, Reiki, meditação e outras áreas.</p>
+
+            <h2>Competências-chave</h2>
+            <ul>
+                <li>Inteligência Artificial & Engenharia de Prompt</li>
+                <li>Dados, BI, indicadores & análise</li>
+                <li>Sistemas de Informação & tecnologia</li>
+                <li>Projetos, processos & transformação digital</li>
+                <li>Marketing, conteúdo & comunicação</li>
+                <li>Educação, treinamento & palestras</li>
+                <li>Políticas públicas & projetos sociais</li>
+                <li>Desenvolvimento humano & práticas integrativas</li>
+            </ul>
+
+            <h2>Idiomas</h2>
+            <p>Português — Nativo</p>
+            <p>Inglês — Básico</p>
+            <p>Espanhol — Básico</p>
+
+            <h2>Contato</h2>
+            <div class="contact-item">
+                <strong>Telefone</strong>
+                <span>(63) 98412-6242</span>
+            </div>
+            <div class="contact-item">
+                <strong>Local</strong>
+                <span>Itabuna, Bahia, Brasil</span>
+            </div>
+            <div class="contact-item">
+                <strong>E-mail</strong>
+                <span>professorluciano1@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/professorluciano</span>
+            </div>
+            <div class="contact-item">
+                <strong>Instagram</strong>
+                <span>@lucianofranciscoi</span>
+            </div>
+            <div class="contact-item">
+                <strong>YouTube</strong>
+                <span>LucianoFranciscoProfessor</span>
+            </div>
+            <div class="contact-item">
+                <strong>Site</strong>
+                <span>lucianofrancisco.com.br</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="header-name">
+                <h1>LUCIANO FRANCISCO</h1>
+            </div>
+            <div class="header-title">ARQUITETO DE TRANSFORMAÇÃO DIGITAL, DADOS & POLÍTICAS PÚBLICAS</div>
+            <div class="header-subtitle">Inteligência Artificial • Tecnologia • Estratégia • Educação • Marketing • Desenvolvimento Humano</div>
+
+            <div class="profile-box">
+                <strong>Perfil transversal</strong> — profissional com capacidade de atuar em diferentes áreas e ambientes, integrando tecnologia, dados, comunicação, projetos, educação e desenvolvimento humano conforme a necessidade da organização.
+            </div>
+
+            <h2>Experiência</h2>
+
+            <div class="experience-item">
+                <h3>Secretaria Estadual de Cidadania e Justiça</h3>
+                <div class="role">Gerente de Estado de Políticas e Proteção da Pessoa Idosa • 2015–2016</div>
+                <p>Gestão de políticas públicas; criação e gestão de projetos sociais; atuação no Conselho Estadual dos Direitos da Pessoa Idosa; articulação institucional e formulação de ações dirigidas à população idosa.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Professor de Tecnologia e Sistemas de Informação</h3>
+                <div class="role">Experiência profissional acumulada em tecnologia e educação</div>
+                <p>Ensino de informática, tecnologia, sistemas, ferramentas digitais e conhecimentos aplicados; desenvolvimento de aulas, projetos e conteúdos para diferentes perfis de aprendizagem.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Consultor — Tecnologia, IA, Dados & Marketing Digital</h3>
+                <div class="role">Atuação independente • projetos e consultorias</div>
+                <p>Atuação em inteligência artificial, engenharia de prompt, análise de dados, marketing digital, automação, indicadores, processos, conteúdo e transformação digital.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Coliseo Eventos</h3>
+                <div class="role">Massoterapeuta • Publicitário • Desenvolvedor de Site • Criador de Conteúdo • Social Media • 2017–2019</div>
+                <p>Atuação integrada em comunicação, publicidade, presença digital, desenvolvimento de site, conteúdo e divulgação.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Terapeuta Holístico & Desenvolvimento Humano</h3>
+                <div class="role">Atuação independente • 2020–atual</div>
+                <p>Atendimento online e produção de conteúdos relacionados a desenvolvimento humano, inteligência emocional e práticas integrativas, conforme as formações realizadas.</p>
+            </div>
+
+            <h2>Projeto de destaque</h2>
+            <div class="highlight-box">
+                <strong>Projeto Mobiliza</strong> — projeto criado no âmbito da atuação em políticas públicas para mobilização social, comunicação e enfrentamento da violência contra a pessoa idosa.
+            </div>
+
+            <h2>Onde posso contribuir</h2>
+            <div class="contribute-section">
+                <p><strong>Empresas:</strong> dados • IA • marketing • processos • projetos • transformação digital</p>
+                <p><strong>Educação:</strong> docência • tecnologia • IA • capacitação • palestras</p>
+                <p><strong>Setor público:</strong> políticas públicas • projetos sociais • dados • gestão • comunicação</p>
+                <p><strong>Saúde e desenvolvimento humano:</strong> educação • consultoria • projetos • práticas integrativas dentro do respectivo escopo profissional</p>
+                <p><strong>Consultoria:</strong> diagnóstico • estratégia • conteúdo • tecnologia • projetos personalizados</p>
+            </div>
+
+            <div class="footer-note">
+                Currículo executivo de apresentação. Informações detalhadas, projetos e trajetória podem ser consultados no portfólio digital.
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+</contents>
+</fsWrite>
