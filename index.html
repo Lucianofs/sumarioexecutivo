@@ -1,87 +1,328 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Luciano Francisco — IA, Dados, Transformação Digital, Políticas Públicas, Educação, Marketing, Desenvolvimento Humano, Palestras e Consultoria.">
-<title>Luciano Francisco | Estratégia • IA • Dados • Políticas Públicas</title>
-<style>
-:root{--bg:#07111f;--bg2:#0c192b;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.13);--text:#eef4ff;--muted:#aebdd2;--a:#66d9ff;--b:#8d7cff;--gold:#f2c66d;--max:1180px;--r:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 0%,rgba(102,217,255,.12),transparent 30%),radial-gradient(circle at 90% 10%,rgba(141,124,255,.14),transparent 32%),linear-gradient(180deg,var(--bg),#050b14);line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),92%);margin:auto}
-header{position:relative;overflow:hidden;min-height:720px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
-nav{position:absolute;top:0;left:0;right:0;padding:22px 0;z-index:5}nav .wrap{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:.08em}.navlinks{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
-.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center;padding:100px 0 70px}.eyebrow{display:inline-flex;padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:var(--a);background:rgba(255,255,255,.035);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
-h1{margin:22px 0 10px;font-size:clamp(3rem,7vw,6.2rem);line-height:.95;letter-spacing:-.055em}.hero h2{margin:0;font-size:clamp(1.15rem,2vw,1.65rem);color:#d9e5f6;font-weight:500}.hero p{color:var(--muted);font-size:1.08rem;max-width:800px;margin:26px 0}.quote{border-left:3px solid var(--gold);padding-left:18px;color:#f6e6be;font-size:1.1rem;font-weight:600}
-.portrait{display:flex;justify-content:center}.frame{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.2);padding:10px;background:linear-gradient(145deg,rgba(102,217,255,.18),rgba(141,124,255,.15));box-shadow:0 30px 90px rgba(0,0,0,.35)}.portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;background:#101d30}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:13px 19px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.055);font-weight:700}.btn.primary{color:#06101c;background:linear-gradient(135deg,var(--a),#b8f1ff);border:0}
-section{padding:88px 0;border-bottom:1px solid var(--line)}.section-head{max-width:780px;margin-bottom:35px}.kicker{color:var(--a);text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:800}h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.035em;margin:10px 0 14px}.section-head p{color:var(--muted);margin:0}
-.architecture,.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.node,.card,.aud,.credential-box{padding:24px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}.node{position:relative}.node strong{display:block;font-size:1.05rem;margin-bottom:8px}.node span{color:var(--muted);font-size:.92rem}.node:after{content:"→";position:absolute;right:-14px;top:50%;color:var(--a);font-size:1.3rem}.node:last-child:after{display:none}
-.grid{grid-template-columns:repeat(3,1fr)}.card:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}.num{color:var(--gold);font-weight:900;font-size:.8rem;letter-spacing:.1em}.card h3{margin:9px 0 10px;font-size:1.22rem}.card p,.card li{color:var(--muted);font-size:.94rem}
-.case{display:grid;grid-template-columns:.35fr 1fr;gap:25px;padding:30px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(135deg,rgba(102,217,255,.07),rgba(141,124,255,.055))}.case-label{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}.case h3{font-size:1.65rem;margin:5px 0 10px}.case p{color:var(--muted)}
-.timeline{display:grid;gap:16px}.experience{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:23px 0;border-bottom:1px solid var(--line)}.period{color:var(--a);font-weight:800}.experience h3{margin:0 0 7px}.experience p{color:var(--muted);margin:0}
-.audience{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.aud strong{display:block;margin-bottom:5px}.aud span{color:var(--muted);font-size:.88rem}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:20px}.credential-box li{color:var(--muted);margin:5px 0}
-footer{padding:55px 0;color:var(--muted)}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:30px}.footer-name{color:var(--text);font-size:1.5rem;font-weight:900}.links{display:grid;gap:8px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.quote{text-align:left}.portrait{order:-1}.architecture,.grid{grid-template-columns:1fr 1fr}.audience{grid-template-columns:1fr 1fr}.credentials,.footer-grid{grid-template-columns:1fr}.navlinks{display:none}}
-@media(max-width:600px){section{padding:65px 0}.architecture,.grid,.audience{grid-template-columns:1fr}.node:after{display:none}.experience,.case{grid-template-columns:1fr}.hero{text-align:center}h1{font-size:3.35rem}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Francisco | Sumário Executivo & Ecossistema Profissional</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-gold: #f59e0b;
+            --accent-blue: #3b82f6;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .headline {
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* CFO Proposition */
+        .cfo-proposition {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cfo-proposition::before {
+            content: '™';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            font-weight: 900;
+        }
+
+        .cfo-proposition h2 {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .cfo-proposition p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* Ecosystem Grid */
+        .ecosystem-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--text-primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--accent-blue);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .card-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-link::after {
+            transform: translateX(5px);
+        }
+
+        /* Interconnection Loop */
+        .loop-section {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .loop-section h3 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .loop-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .loop-item {
+            background: var(--bg-dark);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .loop-arrow {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .loop-flow { flex-direction: column; }
+            .loop-arrow { transform: rotate(90deg); }
+        }
+    </style>
 </head>
 <body>
 
-<header id="inicio">
-<nav><div class="wrap"><div class="brand">LUCIANO FRANCISCO</div><div class="navlinks"><a href="#atuacao">Atuação</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#formacao">Formação</a><a href="#contato">Contato</a></div></div></nav>
-<div class="wrap hero">
-<div>
-<span class="eyebrow">Executive Portfolio • Estratégia • Tecnologia • Pessoas</span>
-<h1>Luciano<br>Francisco</h1>
-<h2>Inteligência Artificial • Dados • Transformação Digital • Políticas Públicas • Negócios • Educação • Desenvolvimento Humano</h2>
-<p>Profissional multidisciplinar com formação em Sistemas de Informação e trajetória conectando tecnologia, dados, projetos, educação, comunicação, políticas públicas, marketing e desenvolvimento humano.</p>
-<div class="quote">CFO da Alma e dos Negócios™ — Estratégia + Dados + Tecnologia + Pessoas.</div>
-<div class="cta"><a class="btn primary" href="#contato">Vamos conversar</a><a class="btn" href="https://www.linkedin.com/in/professorluciano" target="_blank">LinkedIn</a></div>
-</div>
-<div class="portrait"><div class="frame"><img src="assets/images/avatar.png" alt="Luciano Francisco"></div></div>
-</div>
-</header>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="headline">Criador do CFO da Alma e dos Negócios™</div>
+            <h1>Luciano Francisco</h1>
+            <p>Arquiteto de Políticas Digitais & Sistemas de Crescimento | Consultor de Dados, IA & Marketing Digital | Terapeuta Holístico | Palestrante & Escritor | 19 Anos de Experiência</p>
+        </header>
 
-<main>
-<section><div class="wrap"><div class="section-head"><span class="kicker">A lógica que conecta tudo</span><h2>Um profissional. Várias aplicações. Uma arquitetura.</h2><p>A atuação de Luciano parte de uma mesma lógica: compreender problemas, organizar informação, identificar padrões, estruturar soluções e transformar conhecimento em ação — em pessoas, organizações, empresas, projetos e políticas públicas.</p></div>
-<div class="architecture"><div class="node"><strong>Diagnóstico</strong><span>Entender o problema, o contexto e as necessidades.</span></div><div class="node"><strong>Dados & Conhecimento</strong><span>Organizar informações, evidências, experiência e visão sistêmica.</span></div><div class="node"><strong>Estratégia</strong><span>Transformar diagnóstico em projeto, plano, processo ou intervenção.</span></div><div class="node"><strong>Transformação</strong><span>Ensinar, implementar, comunicar, acompanhar e desenvolver.</span></div></div></div></section>
+        <!-- Core Proposition -->
+        <section class="cfo-proposition">
+            <h2>CFO da Alma e dos Negócios™</h2>
+            <p>Uma metodologia proprietária que diagnostica pessoas, organizações e projetos públicos através de dados, clareza e estratégia acionável. Unindo inteligência emocional, espiritualidade e business intelligence para desbloquear crescimento sustentável e transformação real.</p>
+        </section>
 
-<section id="atuacao"><div class="wrap"><div class="section-head"><span class="kicker">Áreas de atuação</span><h2>Onde posso gerar valor</h2><p>As áreas abaixo representam diferentes aplicações de uma mesma capacidade de diagnóstico, estratégia, tecnologia, comunicação e desenvolvimento.</p></div>
-<div class="grid">
-<article class="card"><span class="num">01</span><h3>Inteligência Artificial & Tecnologia</h3><p>IA aplicada, IA generativa, Engenharia de Prompt, tecnologia, Sistemas de Informação, automação e uso estratégico de ferramentas digitais.</p><ul><li>IA para negócios e produtividade</li><li>Prompt Engineering</li><li>Informática e TI</li><li>Sistemas de Informação</li><li>Programação e ferramentas digitais</li></ul></article>
-<article class="card"><span class="num">02</span><h3>Dados, BI & Inteligência Analítica</h3><p>Transformação de dados em informação útil para decisões, acompanhamento de desempenho e melhoria de processos.</p><ul><li>Análise de dados</li><li>Business Intelligence</li><li>Power BI e dashboards</li><li>Excel e SQL</li><li>Indicadores, KPIs e relatórios</li></ul></article>
-<article class="card"><span class="num">03</span><h3>Transformação Digital & Consultoria</h3><p>Diagnóstico e estruturação de soluções que conectam tecnologia, processos, pessoas e objetivos organizacionais.</p><ul><li>Transformação digital</li><li>Processos e melhoria contínua</li><li>Projetos e implantação</li><li>Estratégia e diagnóstico</li><li>Consultoria multidisciplinar</li></ul></article>
-<article class="card"><span class="num">04</span><h3>Negócios, Marketing & Growth</h3><p>Uso de dados, tecnologia e comunicação para compreender mercados, melhorar processos de marketing e apoiar crescimento.</p><ul><li>Marketing Digital</li><li>Tráfego e performance</li><li>Marketing orientado a dados</li><li>Conteúdo e comunicação</li><li>Estratégia de negócios</li></ul></article>
-<article class="card"><span class="num">05</span><h3>Políticas Públicas & Projetos Sociais</h3><p>Experiência em gestão pública, diagnóstico de problemas sociais, projetos, articulação institucional e comunicação de interesse público.</p><ul><li>Políticas públicas</li><li>Projetos municipais e estaduais</li><li>Diagnóstico e planejamento</li><li>Proteção social e pessoa idosa</li><li>Projetos de mobilização social</li></ul></article>
-<article class="card"><span class="num">06</span><h3>Educação & Formação</h3><p>Professor de Tecnologia e Sistemas de Informação, com abordagem prática, personalizada e orientada à aplicação.</p><ul><li>Informática</li><li>TI e Sistemas de Informação</li><li>IA e Engenharia de Prompt</li><li>Excel, Power BI, Dados e SQL</li><li>Treinamentos corporativos</li></ul></article>
-<article class="card"><span class="num">07</span><h3>Palestras, Conteúdo & Autoria</h3><p>Comunicação de conhecimento por meio de palestras, treinamentos, conteúdos e produção intelectual.</p><ul><li>Palestras e workshops</li><li>Storytelling</li><li>Educação e tecnologia</li><li>Inteligência emocional</li><li>Autor de 4 livros</li></ul></article>
-<article class="card"><span class="num">08</span><h3>Terapias Holísticas & Desenvolvimento Humano</h3><p>Atuação em terapias holísticas, espiritualidade e desenvolvimento humano, com acolhimento, escuta e práticas integrativas dentro do escopo de formação.</p><ul><li>Atendimento terapêutico</li><li>Inteligência emocional</li><li>Meditação e bem-estar</li><li>Práticas holísticas estudadas</li><li>Atendimento online</li></ul></article>
-<article class="card"><span class="num">09</span><h3>Comunicação Pública & Institucional</h3><p>Experiência que aproxima comunicação, projetos, mobilização, conteúdo, marketing e interesse público.</p><ul><li>Campanhas e projetos</li><li>Comunicação digital</li><li>Conteúdo e storytelling</li><li>Mobilização social</li><li>Articulação com públicos diversos</li></ul></article>
-</div></div></section>
+        <!-- Ecosystem Grid -->
+        <h2 class="ecosystem-title">Ecossistema Profissional</h2>
+        <div class="grid">
+            <!-- LinkedIn -->
+            <a href="https://lucianofs.github.io/sumarioexecutivo/linkedin" target="_blank" class="card">
+                <div class="card-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>Identidade profissional pública. Conexões, validação de mercado e rede de contatos estratégica.</p>
+                <span class="card-link">Acessar Perfil</span>
+            </a>
 
-<section id="projetos"><div class="wrap"><div class="section-head"><span class="kicker">Projeto em destaque</span><h2>Mobiliza — quando política pública encontra comunicação e mobilização</h2></div><div class="case"><div><div class="case-label">Tocantins • Projeto social</div><h3>Mobiliza</h3></div><div><p>Projeto criado e gerido durante a atuação como Gerente Estadual de Políticas e Proteção da Pessoa Idosa. A iniciativa utilizou comunicação e mobilização social para ampliar a conscientização sobre a proteção da pessoa idosa.</p><p>A campanha trabalhou com a mensagem <strong>“Pessoa idosa. Respeite, proteja, denuncie.”</strong>, envolvendo participação social, divulgação e presença da mensagem em diferentes espaços.</p><p>É um exemplo da capacidade de conectar <strong>problema público → diagnóstico → estratégia → projeto → comunicação → mobilização</strong>.</p></div></div></div></section>
+            <!-- Portfólio -->
+            <a href="https://lucianofs.github.io/sumarioexecutivo/portfolio" target="_blank" class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Portfólio</h3>
+                <p>Prova de amplitude e projetos. Casos de sucesso, entregas reais e impacto mensurável.</p>
+                <span class="card-link">Ver Projetos</span>
+            </a>
 
-<section id="experiencia"><div class="wrap"><div class="section-head"><span class="kicker">Trajetória</span><h2>Experiência que atravessa setores</h2><p>Tecnologia, educação, projetos, políticas públicas, comunicação, marketing e desenvolvimento humano fazem parte de uma trajetória multidisciplinar.</p></div><div class="timeline">
-<div class="experience"><div class="period">Tecnologia & Educação</div><div><h3>Professor de Tecnologia da Informação / Sistemas de Informação</h3><p>Experiência de longa duração em educação tecnológica, informática, redes, manutenção, sistemas, ferramentas digitais e formação de pessoas.</p></div></div>
-<div class="experience"><div class="period">Mar/2015 – Dez/2016</div><div><h3>Gerente Estadual de Políticas e Proteção da Pessoa Idosa</h3><p>Gestão de políticas e projetos voltados à pessoa idosa, análise de informações, articulação institucional, criação e gestão de projetos sociais e participação no Conselho Estadual dos Direitos da Pessoa Idosa.</p></div></div>
-<div class="experience"><div class="period">Projetos & Consultoria</div><div><h3>Consultoria em Tecnologia, Dados, Marketing e Estratégia</h3><p>Atuação independente em tecnologia, dados, IA, marketing digital, análise, projetos, conteúdo e soluções personalizadas.</p></div></div>
-<div class="experience"><div class="period">Desde 2020</div><div><h3>Terapeuta Holístico & Desenvolvimento Humano</h3><p>Atendimento online e atuação com práticas estudadas em terapias holísticas, inteligência emocional, espiritualidade, meditação e desenvolvimento pessoal.</p></div></div>
-<div class="experience"><div class="period">Produção intelectual</div><div><h3>Palestrante, Escritor e Criador de Conteúdo</h3><p>Produção de conteúdo, palestras, treinamentos e autoria de quatro livros, conectando tecnologia, comportamento, conhecimento e desenvolvimento humano.</p></div></div>
-</div></div></section>
+            <!-- Currículo Executivo -->
+            <a href="https://lucianofs.github.io/sumarioexecutivo/curriculo-executivo" target="_blank" class="card">
+                <div class="card-icon">📄</div>
+                <h3>Currículo Executivo</h3>
+                <p>Documento de leitura rápida e alto impacto. Ideal para quando você diz: "Posso lhe enviar meu currículo?".</p>
+                <span class="card-link">Visualizar / Imprimir</span>
+            </a>
 
-<section><div class="wrap"><div class="section-head"><span class="kicker">Aplicações</span><h2>Instituições e contextos de aplicação</h2><p>O repertório pode ser aplicado em contextos públicos, privados, educacionais, empresariais, sociais e de desenvolvimento humano, respeitando o escopo e as regras de cada instituição.</p></div>
-<div class="audience"><div class="aud"><strong>Prefeituras</strong><span>Diagnóstico, projetos, tecnologia, dados e políticas públicas.</span></div><div class="aud"><strong>Governos & órgãos públicos</strong><span>Projetos, planejamento, comunicação e proteção social.</span></div><div class="aud"><strong>Empresas</strong><span>Dados, IA, marketing, processos, BI e transformação digital.</span></div><div class="aud"><strong>Hospitais & clínicas</strong><span>Tecnologia, dados, projetos e desenvolvimento humano conforme escopo.</span></div><div class="aud"><strong>Instituições de ensino</strong><span>IA, TI, informática, dados, sistemas e formação.</span></div><div class="aud"><strong>Faculdades & universidades</strong><span>Docência, tecnologia, IA, dados e palestras.</span></div><div class="aud"><strong>Instituições sociais e religiosas</strong><span>Palestras, acolhimento, desenvolvimento humano e projetos, conforme a finalidade da instituição.</span></div><div class="aud"><strong>Eventos & organizações</strong><span>Palestras, workshops, treinamento e conteúdo.</span></div></div></div></section>
+            <!-- Currículo ATS -->
+            <a href="https://lucianofs.github.io/sumarioexecutivo/curriculo-ats" target="_blank" class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Currículo ATS (Nacional)</h3>
+                <p>Documento otimizado para sistemas de rastreamento de candidatos (ATS), focado em vagas específicas no Brasil.</p>
+                <span class="card-link">Acessar Modelo</span>
+            </a>
 
-<section id="formacao"><div class="wrap"><div class="section-head"><span class="kicker">Formação</span><h2>Base técnica + formação multidisciplinar</h2></div><div class="credentials">
-<div class="credential-box"><h3>Formação acadêmica</h3><ul><li><strong>1994–1997:</strong> Técnico em Processamento de Dados</li><li><strong>2004–2008:</strong> Bacharelado em Sistemas de Informação</li></ul></div>
-<div class="credential-box"><h3>Formação complementar</h3><ul><li>Terapias Holísticas</li><li>Healing of the Soul / Cura da Alma</li><li>Barras de Access</li><li>Feng Shui</li><li>Hipnoterapia</li><li>Marketing Digital</li><li>Ho'oponopono</li><li>Numerologia</li><li>Meditação e Reiki</li><li>PNL e Terapia Transpessoal</li><li>Storytelling</li><li>Inteligência Emocional</li><li>Análise corporal, aromaterapia, cromoterapia e outras práticas estudadas</li></ul></div>
-</div></div></section>
+            <!-- Currículo ATS Internacional -->
+            <a href="https://lucianofs.github.io/sumarioexecutivo/curriculo-ats-internacional" target="_blank" class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Currículo ATS (Internacional)</h3>
+                <p>Versão global e adaptada culturalmente para oportunidades e consultorias fora do Brasil.</p>
+                <span class="card-link">Acessar Modelo Global</span>
+            </a>
+        </div>
 
-<section><div class="wrap"><div class="section-head"><span class="kicker">Posicionamento autoral</span><h2>CFO da Alma e dos Negócios™</h2><p>Uma proposta autoral em desenvolvimento para integrar estratégia, dados, tecnologia, negócios e desenvolvimento humano. O conceito parte da ideia de compreender estruturas, decisões, comportamentos, processos e contextos antes de propor intervenções.</p></div><div class="architecture"><div class="node"><strong>Alma</strong><span>Pessoas, consciência, comportamento e desenvolvimento.</span></div><div class="node"><strong>Negócios</strong><span>Estratégia, processos, marketing, crescimento e resultados.</span></div><div class="node"><strong>Dados</strong><span>Evidências, indicadores, análise e decisão.</span></div><div class="node"><strong>Tecnologia</strong><span>IA, sistemas, automação e transformação.</span></div></div></div></section>
+        <!-- Strategic Loop -->
+        <section class="loop-section">
+            <h3>A Interligação Estratégica</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">Um ecossistema coeso que valida sua autoridade em cada ponto de contato:</p>
+            <div class="loop-flow">
+                <span class="loop-item">LinkedIn</span>
+                <span class="loop-arrow">→</span>
+                <span class="loop-item">Portfólio</span>
+                <span class="loop-arrow">→</span>
+                <span class="loop-item">CV Executivo</span>
+                <span class="loop-arrow">→</span>
+                <span class="loop-item">CV ATS</span>
+                <span class="loop-arrow">→</span>
+                <span class="loop-item">LinkedIn</span>
+            </div>
+        </section>
 
-<section id="contato"><div class="wrap"><div class="section-head"><span class="kicker">Contato profissional</span><h2>Vamos transformar uma necessidade em um projeto?</h2><p>Consultoria, projeto, aula, palestra, treinamento, análise, solução tecnológica ou atendimento terapêutico dentro do respectivo escopo de atuação.</p></div><div class="cta"><a class="btn primary" href="mailto:professorluciano1@gmail.com">Enviar e-mail</a><a class="btn" href="https://wa.me/5563984126242" target="_blank">WhatsApp</a><a class="btn" href="https://www.linkedin.com/in/professorluciano" target="_blank">LinkedIn</a><a class="btn" href="https://www.instagram.com/lucianofranciscoi" target="_blank">Instagram</a><a class="btn" href="https://www.youtube.com/@LucianoFranciscoProfessor" target="_blank">YouTube</a></div></div></section>
-</main>
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Luciano Francisco. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">
+                <a href="mailto:professorluciano1@gmail.com">professorluciano1@gmail.com</a> | 
+                <a href="https://lucianofrancisco.com.br" target="_blank">lucianofrancisco.com.br</a> | 
+                <a href="https://wa.me/5563984126242" target="_blank">WhatsApp</a>
+            </p>
+        </footer>
+    </div>
 
-<footer><div class="wrap footer-grid"><div><div class="footer-name">Luciano Francisco</div><p>IA • Dados • Tecnologia • Transformação Digital • Políticas Públicas • Negócios • Educação • Desenvolvimento Humano</p><p>Itabuna, Bahia, Brasil • Atendimento presencial e online conforme o serviço.</p></div><div class="links"><a href="#inicio">↑ Voltar ao início</a><a href="https://www.linkedin.com/in/professorluciano" target="_blank">LinkedIn</a><a href="mailto:professorluciano1@gmail.com">professorluciano1@gmail.com</a><a href="https://wa.me/5563984126242" target="_blank">(63) 98412-6242</a></div></div></footer>
 </body>
 </html>
