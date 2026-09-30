@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Francisco — Conecte-se Comigo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .tagline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-title {
+            font-size: 1.5em;
+            color: #1a3a5c;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .service-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .service-link:hover {
+            color: #764ba2;
+        }
+
+        .service-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-link::after {
+            transform: translateX(5px);
+        }
+
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+
+        .cta-section h2 {
+            color: #1a3a5c;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .linkedin-button {
+            display: inline-flex;
+            align-items: center;
+            background: #0077b5;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,119,181,0.4);
+        }
+
+        .linkedin-button:hover {
+            background: #005885;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,119,181,0.5);
+        }
+
+        .linkedin-button::before {
+            content: 'in';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: white;
+            color: #0077b5;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Luciano Francisco</h1>
+            <p class="tagline">
+                Criador do CFO da Alma & dos Negócios™ | Arquiteto de Políticas Digitais & Sistemas de Crescimento<br>
+                Consultor de IA, Dados & Marketing Digital | Terapeuta Holístico | Palestrante & Escritor<br>
+                19 Anos de Experiência Transformando Pessoas e Organizações
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- Card 1: CFO da Alma e dos Negócios -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    💼
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">CFO da Alma e dos Negócios™</h3>
+                    <p class="service-description">
+                        Diagnóstico de pessoas e empresas através de dados, clareza e estratégia acionável. 
+                        Unindo inteligência emocional e business intelligence para crescimento sustentável.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Card 2: Consultoria em IA e Dados -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    🤖
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Consultoria em IA & Dados</h3>
+                    <p class="service-description">
+                        Transformação digital, engenharia de prompt, análise de dados, marketing digital 
+                        e automação de processos para empresas de qualquer porte.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Card 3: Terapia Holística -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    🧘
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Terapia Holística & Bem-Estar</h3>
+                    <p class="service-description">
+                        Diagnóstico espiritual com métricas reais. Constelação familiar, numerologia, 
+                        técnicas energéticas e protocolos proprietários de desenvolvimento humano.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Card 4: Palestras e Autor -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    📚
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Palestrante & Escritor</h3>
+                    <p class="service-description">
+                        4 livros publicados na Amazon. Palestras sobre inteligência emocional, 
+                        espiritualidade, inovação e políticas públicas para empresas e instituições.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Card 5: Políticas Públicas -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    🏛️
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Políticas Públicas & Impacto Social</h3>
+                    <p class="service-description">
+                        Criador do Projeto Mobiliza, adotado pelo Governo do Tocantins. 
+                        Experiência em políticas para proteção da pessoa idosa e mobilização social.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Card 6: Transformação de Negócios -->
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="service-card">
+                <div class="service-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                    📊
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Transformação de Negócios</h3>
+                    <p class="service-description">
+                        Assessoria em mudança organizacional, experiência do cliente, 
+                        performance operacional e desenvolvimento de liderança com base em dados.
+                    </p>
+                    <span class="service-link">Conecte-se no LinkedIn</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Vamos Conectar?</h2>
+            <p>
+                Com mais de 12.000 profissionais treinados, 20+ empresas atendidas e 300+ palestras realizadas,<br>
+                estou pronto para ajudar você e sua organização a alcançar o próximo nível.
+            </p>
+            <a href="https://www.linkedin.com/in/lucianofranciscoi/" target="_blank" class="linkedin-button">
+                Visitar Perfil no LinkedIn
+            </a>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">12.000+</span>
+                    <span class="stat-label">Profissionais Treinados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Empresas Atendidas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Palestras Realizadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">19</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
