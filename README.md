@@ -9,7 +9,7 @@ CONTATO / CONTRATAÇÃO
 
 LinkedIn
 Identidade profissional pública.
-https://lucianofs.github.io/sumarioexecutivo/linkindin
+https://lucianofs.github.io/sumarioexecutivo/linkendin
 
 Portfólio
 Prova de amplitude e projetos.
