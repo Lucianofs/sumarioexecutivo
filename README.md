@@ -42,6 +42,8 @@ O ecossistema foi desenhado para criar um **loop de validação contínua**:
       ↓
 [ CV Executivo ] → Resumo de Alto Nível para Decisores
       ↓
-[ CV ATS ] → Otimização Técnica para Recrutamento
+[ CV ATS Nacional] → Otimização Técnica para Recrutamento
       ↓
-[ LinkedIn ] → Retorno e Fortalecimento da Marca Pessoal
+[ CV ATS Internacional] → Retorno e Fortalecimento da Marca Pessoal
+      ↓
+[ CV ATS Outro Específico] → Solicite para um cargo mais específico 
