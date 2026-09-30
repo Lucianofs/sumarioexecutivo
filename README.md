@@ -1,39 +1,47 @@
-# Luciano Francisco — Ecossistema Profissional
+# 🌐 Sumário Executivo & Ecossistema Profissional | Luciano Francisco
 
-## Arquitetura
-LINKEDIN ↓
-PORTFÓLIO ↓
-CURRÍCULO EXECUTIVO ↓
-CURRÍCULO ATS ESPECÍFICO ↓
-CONTATO / CONTRATAÇÃO
+> **Arquiteto de Políticas Digitais & Sistemas de Crescimento | Criador do CFO da Alma e dos Negócios™**
 
-LinkedIn
-Identidade profissional pública.
-https://lucianofs.github.io/sumarioexecutivo/linkendin
+Este repositório hospeda o **Hub Central (Sumário Executivo)** e os ativos digitais que compõem o ecossistema profissional de Luciano Francisco. Projetado para ser a porta de entrada principal, interligando identidade, prova social e documentação estratégica de carreira.
 
-Portfólio
-Prova de amplitude e projetos.
-https://lucianofs.github.io/sumarioexecutivo/portfolio
+🔗 **Acesso Público:** [lucianofs.github.io/sumarioexecutivo](https://lucianofs.github.io/sumarioexecutivo/)
 
-Currículo Executivo
-Documento que alguém abre rapidamente quando você diz: “Posso lhe enviar meu currículo.”
-https://lucianofs.github.io/sumarioexecutivo/curriculo-executivo 
+---
 
-Currículo ATS
-É o documento para vaga específica. Caso a vaga seja outra. Você pode solicitar que mando um específico para a vaga em questão.
-https://lucianofs.github.io/sumarioexecutivo/curriculo-ats
+## 💡 A Proposição Central: CFO da Alma e dos Negócios™
 
-Currículo ATS Internacional 
-É um documento para vaga específica internacional. Caso a vaga seja outra. Você pode solicitar que mando um específico.
-https://lucianofs.github.io/sumarioexecutivo/curriculum-ats-internacional
+Uma metodologia proprietária que diagnostica pessoas, organizações e projetos públicos através de **dados, clareza e estratégia acionável**. 
+- **CFO da Alma:** Trabalho com indivíduos através de terapia holística, diagnóstico espiritual e clareza baseada em energia para desbloquear crescimento.
+- **CFO dos Negócios:** Ajuda empresas e instituições a descobrir gargalos ocultos através de consultoria de negócios, análise de CRM, marketing digital, estratégia de IA e projetos de impacto social.
 
+---
 
-## Interligação
-LinkedIn → Portfólio → CV Executivo → CV ATS → LinkedIn.
+## 🗺️ Mapa do Ecossistema
 
-## URL
-https://lucianofs.github.io/sumarioexecutivo/
+O hub central (`index.html`) atua como a "capa" que direciona estrategicamente para os seguintes módulos:
 
+| Módulo | URL Relativa | Propósito Estratégico |
+| :--- | :--- | :--- |
+| **🏠 Sumário Executivo (Hub)** | `/` (Raiz) | Página de entrada principal. Visão geral, proposição de valor e roteamento. |
+| **💼 LinkedIn** | `/linkedin` | Identidade profissional pública, validação de mercado e networking. |
+| **🚀 Portfólio** | `/portfolio` | Prova de amplitude. Casos de sucesso, projetos reais e impacto mensurável. |
+| **📄 Currículo Executivo** | `/curriculo-executivo` | Documento de 1 página, alto impacto visual. Para envio rápido e direto a decisores. |
+| **🎯 Currículo ATS (BR)** | `/curriculo-ats` | Documento otimizado para sistemas de rastreamento (ATS) de vagas específicas no Brasil. |
+| **🌍 Currículo ATS (Global)**| `/curriculo-ats-internacional`| Versão adaptada cultural e linguisticamente para oportunidades e consultorias internacionais. |
 
+---
 
-CFO da Alma e dos Negócios™ é uma proposta intelectual/profissional.
+## 🔄 A Interligação Estratégica
+
+O ecossistema foi desenhado para criar um **loop de validação contínua**:
+
+```text
+[ LinkedIn ] → Validação Pública e Rede
+      ↓
+[ Portfólio ] → Prova de Capacidade e Resultados
+      ↓
+[ CV Executivo ] → Resumo de Alto Nível para Decisores
+      ↓
+[ CV ATS ] → Otimização Técnica para Recrutamento
+      ↓
+[ LinkedIn ] → Retorno e Fortalecimento da Marca Pessoal
