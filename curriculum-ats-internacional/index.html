@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Francisco - International ATS Resume</title>
+    <style>
+        /* ATS-Friendly & Print-Optimized Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif; /* Standard ATS fonts */
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.5;
+            font-size: 11pt;
+        }
+
+        .page {
+            width: 210mm; /* A4 width */
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            color: #1a3a5c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header .title {
+            font-size: 12pt;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            color: #1a3a5c;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Summary */
+        .summary p {
+            text-align: justify;
+            font-size: 10.5pt;
+            color: #333;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 20px;
+        }
+
+        .skills-grid ul {
+            list-style-type: none;
+        }
+
+        .skills-grid li {
+            font-size: 10.5pt;
+            color: #333;
+            margin-bottom: 4px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-grid li::before {
+            content: "•";
+            color: #1a3a5c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 18px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .job-date {
+            font-size: 10pt;
+            color: #555;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .company {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #1a3a5c;
+            margin-bottom: 5px;
+        }
+
+        .job ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .job li {
+            font-size: 10.5pt;
+            color: #333;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        /* Education & Certifications */
+        .edu-item {
+            margin-bottom: 10px;
+        }
+
+        .edu-degree {
+            font-weight: bold;
+            font-size: 10.5pt;
+            color: #1a1a1a;
+        }
+
+        .edu-school {
+            font-size: 10.5pt;
+            color: #333;
+        }
+
+        .edu-date {
+            font-size: 10pt;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1a3a5c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            background-color: #2c5282;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                padding: 20px 40px;
+            }
+            .print-btn {
+                display: none !important;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                width: 100%;
+                padding: 20px;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Download / Print as PDF</button>
+
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <h1>Luciano Francisco</h1>
+            <div class="title">Digital Policy & Growth Systems Architect | Business Data & AI Consultant</div>
+            <div class="contact-info">
+                <span>📍 Itabuna, Bahia, Brazil (Open to Remote / Relocation)</span>
+                <span>📞 +55 63 98412-6242</span>
+                <span>✉️ professorluciano1@gmail.com</span>
+                <span>🔗 linkedin.com/in/lucianofranciscoi</span>
+                <span>🌐 lucianofrancisco.com.br</span>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section summary">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Multidisciplinary Business & Data Consultant and Digital Transformation Architect with 19+ years of experience bridging technology, data, and human-centric strategy. Creator of the <strong>"CFO of Soul & Business™"</strong> methodology, specializing in diagnosing organizational bottlenecks through data analytics, AI strategy, CRM optimization, and change management. Proven track record of training 12,000+ professionals, serving 20+ companies, and designing statewide public policy initiatives impacting 139+ municipalities. Adept at aligning business intelligence with operational performance to drive sustainable growth for corporations, governments, and institutions globally.
+            </p>
+        </section>
+
+        <!-- Core Competencies -->
+        <section class="section">
+            <h2 class="section-title">Core Competencies & Technical Skills</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li>Artificial Intelligence & Prompt Engineering</li>
+                    <li>Business Intelligence (BI) & Data Analytics</li>
+                    <li>Digital Transformation & Change Management</li>
+                    <li>CRM Analysis & Digital Marketing Strategy</li>
+                </ul>
+                <ul>
+                    <li>Public Policy Design & Social Impact</li>
+                    <li>Project Management & Process Optimization</li>
+                    <li>Leadership Development & Systemic Coaching</li>
+                    <li>Web Development & Low-Code Solutions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Founder & Business Data Consultant</span>
+                    <span class="job-date">Feb 2024 – Present</span>
+                </div>
+                <div class="company">CFO da Alma e dos Negócios™ | Itabuna, BA, Brazil</div>
+                <ul>
+                    <li>Developed and deployed a proprietary diagnostic methodology evaluating organizational and individual performance through data-driven metrics and strategic clarity.</li>
+                    <li>Trained 12,000+ professionals across 20+ companies via corporate consulting, workshops, and online programs.</li>
+                    <li>Delivered 300+ keynote lectures on Artificial Intelligence, leadership, digital strategy, and public policy.</li>
+                    <li>Directed political marketing campaigns, CRM analysis, and digital strategy optimization for diverse corporate sectors.</li>
+                    <li>Engineered custom websites, business systems, and AI prompt architectures tailored to specific business workflows.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Business Transformation Advisor & Systemic Coach</span>
+                    <span class="job-date">Jun 2024 – Present</span>
+                </div>
+                <div class="company">Independent Consultancy | Brazil (Remote & On-site)</div>
+                <ul>
+                    <li>Advised leadership teams across multiple industries (including hospitality and services) on organizational change, aligning corporate culture with measurable KPIs.</li>
+                    <li>Implemented data-driven diagnostic frameworks combined with human development strategies to unlock business growth and operational efficiency.</li>
+                    <li>Optimized customer experience (CX) and operational performance for service-based businesses, resorts, and hotels.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Creator & Coordinator, Public Policy & Social Impact</span>
+                    <span class="job-date">Jun 2024 – Present</span>
+                </div>
+                <div class="company">Projeto Mobiliza | Government of the State of Tocantins, Brazil</div>
+                <ul>
+                    <li>Created and led a statewide elder-protection initiative officially adopted by the State Government.</li>
+                    <li>Deployed awareness and social mobilization campaigns across 139 municipalities, significantly reducing elder-abuse indicators.</li>
+                    <li>Built and managed a statewide, data-driven database for continuous monitoring of social vulnerability indicators.</li>
+                    <li>Coordinated multidisciplinary teams and fostered partnerships between public institutions and community networks.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Public Policy Analyst | Elder Care & Data-Driven Policy</span>
+                    <span class="job-date">Mar 2015 – Dec 2016</span>
+                </div>
+                <div class="company">Secretariat of State for Citizenship and Justice | Palmas, Tocantins, Brazil</div>
+                <ul>
+                    <li>Coordinated statewide public policy for elder protection, analyzing 100+ formal complaints to identify regional patterns of vulnerability.</li>
+                    <li>Designed prevention strategies and engaged 139 municipalities through public social networks and inter-agency reporting.</li>
+                    <li>Managed government data systems to ensure continuous monitoring and enforcement of elder rights.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">IT, Education & Social Development Professional</span>
+                    <span class="job-date">Jan 2007 – Dec 2017</span>
+                </div>
+                <div class="company">Multiple Institutions (SENAI, Microlins, Freelance) | Brazil</div>
+                <ul>
+                    <li>Instructed 400+ young professionals in IT, computer networking, and hardware maintenance, preparing them for the job market via national employability programs.</li>
+                    <li>Developed institutional websites and custom systems as a freelance web developer, laying the technical foundation for current AI and data consulting work.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-degree">Bachelor of Science in Information Systems</div>
+                <div class="edu-school">União Educacional de Ensino Superior do Médio Tocantins, Brazil</div>
+                <div class="edu-date">2004 – 2008</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">Data Processing Technician</div>
+                <div class="edu-school">Colégio Estadual Professora Mª de Lourdes Veloso, Brazil</div>
+                <div class="edu-date">1994 – 1997</div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">Certifications & Professional Development</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li>Artificial Intelligence – Professional Certification</li>
+                    <li>Artificial Intelligence – Movimento IA Brasil</li>
+                    <li>Low-Code Development – OutSystems Workshop</li>
+                </ul>
+                <ul>
+                    <li>Emotional Intelligence – High Performance</li>
+                    <li>Financial Education Training</li>
+                    <li>Holistic Therapy & Spirituality (IBTERAPIAS / ULE)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li><strong>Portuguese:</strong> Native</li>
+                    <li><strong>English:</strong> Intermediate / Conversational</li>
+                </ul>
+                <ul>
+                    <li><strong>Spanish:</strong> Elementary</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
