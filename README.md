@@ -25,7 +25,7 @@ https://lucianofs.github.io/sumarioexecutivo/curriculo-ats
 
 Currículo ATS Internacional 
 É um documento para vaga específica internacional. Caso a vaga seja outra. Você pode solicitar que mando um específico.
-https://lucianofs.github.io/sumarioexecutivo/curriculo-ats-internacional
+https://lucianofs.github.io/sumarioexecutivo/curriculum-ats-internacional
 
 
 ## Interligação
