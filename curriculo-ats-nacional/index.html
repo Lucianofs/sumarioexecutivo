@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Francisco | Currículo ATS Nacional</title>
+    <style>
+        /* Estilos Otimizados para ATS e Impressão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fontes padrão ouro para ATS */
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.5;
+            font-size: 11pt;
+        }
+
+        .page {
+            width: 210mm; /* Largura A4 */
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cabeçalho */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            color: #1a3a5c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header .title {
+            font-size: 12pt;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Seções */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            color: #1a3a5c;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Resumo */
+        .summary p {
+            text-align: justify;
+            font-size: 10.5pt;
+            color: #333;
+        }
+
+        /* Competências */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 20px;
+        }
+
+        .skills-grid ul {
+            list-style-type: none;
+        }
+
+        .skills-grid li {
+            font-size: 10.5pt;
+            color: #333;
+            margin-bottom: 4px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-grid li::before {
+            content: "•";
+            color: #1a3a5c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Experiência */
+        .job {
+            margin-bottom: 18px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .job-date {
+            font-size: 10pt;
+            color: #555;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .company {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #1a3a5c;
+            margin-bottom: 5px;
+        }
+
+        .job ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .job li {
+            font-size: 10.5pt;
+            color: #333;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        /* Educação e Certificações */
+        .edu-item {
+            margin-bottom: 10px;
+        }
+
+        .edu-degree {
+            font-weight: bold;
+            font-size: 10.5pt;
+            color: #1a1a1a;
+        }
+
+        .edu-school {
+            font-size: 10.5pt;
+            color: #333;
+        }
+
+        .edu-date {
+            font-size: 10pt;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Botão de Impressão */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1a3a5c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            background-color: #2c5282;
+        }
+
+        /* Estilos de Impressão (Oculta botão e ajusta margens) */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                padding: 20px 40px;
+            }
+            .print-btn {
+                display: none !important;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                width: 100%;
+                padding: 20px;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir / Salvar como PDF</button>
+
+    <div class="page">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Luciano Francisco</h1>
+            <div class="title">Arquiteto de Transformação Digital, Dados & Políticas Públicas | Consultor de IA & Negócios</div>
+            <div class="contact-info">
+                <span>📍 Itabuna, Bahia, Brasil (Aberto a Remoto)</span>
+                <span>📞 (63) 98412-6242</span>
+                <span>✉️ professorluciano1@gmail.com</span>
+                <span>🔗 linkedin.com/in/lucianofranciscoi</span>
+                <span>🌐 lucianofrancisco.com.br</span>
+            </div>
+        </header>
+
+        <!-- Resumo Profissional -->
+        <section class="section summary">
+            <h2 class="section-title">Resumo Profissional</h2>
+            <p>
+                Profissional multidisciplinar com mais de 19 anos de experiência integrando tecnologia, dados, estratégia e desenvolvimento humano. Criador da metodologia proprietária <strong>"CFO da Alma e dos Negócios™"</strong>, atuando no diagnóstico de pessoas, organizações e projetos públicos através de dados, clareza e estratégia acionável. Histórico comprovado na capacitação de 12.000+ profissionais, atendimento a 20+ empresas e realização de 300+ palestras. Especialista em Inteligência Artificial, Business Intelligence (BI), transformação digital, marketing digital e formulação de políticas públicas de impacto social.
+            </p>
+            <p style="margin-top: 8px;">
+                <em>Nota: Este currículo é um modelo base. Versões personalizadas com foco em palavras-chave específicas da vaga podem ser solicitadas.</em>
+            </p>
+        </section>
+
+        <!-- Competências Principais -->
+        <section class="section">
+            <h2 class="section-title">Competências Principais</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li>Inteligência Artificial (IA) e Engenharia de Prompt</li>
+                    <li>Business Intelligence (BI) e Análise de Dados</li>
+                    <li>Transformação Digital e Gestão da Mudança</li>
+                    <li>Gestão de Projetos e Otimização de Processos</li>
+                    <li>Marketing Digital, CRM e Analytics</li>
+                </ul>
+                <ul>
+                    <li>Políticas Públicas e Projetos de Impacto Social</li>
+                    <li>Desenvolvimento Web e Soluções Low-Code</li>
+                    <li>Educação Corporativa, Treinamento e Palestras</li>
+                    <li>Diagnóstico Organizacional e Coaching Sistêmico</li>
+                    <li>Comunicação Estratégica e Produção de Conteúdo</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section class="section">
+            <h2 class="section-title">Experiência Profissional</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Fundador e Consultor de Negócios & Dados</span>
+                    <span class="job-date">Fev 2024 – Atual</span>
+                </div>
+                <div class="company">CFO da Alma e dos Negócios™ | Itabuna, BA (Atuação Nacional/Remota)</div>
+                <ul>
+                    <li>Desenvolvimento e aplicação de metodologia proprietária de diagnóstico de pessoas e empresas baseada em dados e estratégia acionável.</li>
+                    <li>Capacitação de mais de 12.000 profissionais em 20+ empresas através de consultorias, cursos e palestras (presencial e online).</li>
+                    <li>Realização de 300+ palestras sobre Inteligência Artificial, liderança, espiritualidade e políticas públicas.</li>
+                    <li>Atuação em marketing político, análise de CRM e estratégia digital para empresas de diversos setores.</li>
+                    <li>Desenvolvimento de websites, sistemas e prompts de IA aplicados à otimização de fluxos de trabalho empresariais.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Consultor de Transformação de Negócios e Coach Sistêmico</span>
+                    <span class="job-date">Jun 2024 – Atual</span>
+                </div>
+                <div class="company">Consultoria Independente | Brasil</div>
+                <ul>
+                    <li>Assessoria a líderes e organizações de múltiplos setores (incluindo hospitalidade e serviços) em processos de mudança organizacional.</li>
+                    <li>Aplicação de diagnósticos baseados em dados combinados a estratégias de desenvolvimento humano para desbloquear o crescimento dos negócios.</li>
+                    <li>Otimização da experiência do cliente (CX) e desempenho operacional, com foco em hotéis, resorts e empresas de serviço.</li>
+                    <li>Suporte a equipes de liderança na tomada de decisão embasada em KPIs e Business Intelligence.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Criador e Coordenador do Projeto Mobiliza</span>
+                    <span class="job-date">Jun 2024 – Atual</span>
+                </div>
+                <div class="company">Governo do Estado do Tocantins | Palmas, TO</div>
+                <ul>
+                    <li>Criação e liderança de projeto estadual de proteção à pessoa idosa, oficialmente adotado pelo Governo do Tocantins.</li>
+                    <li>Implementação de campanhas de conscientização e mobilização social em 139 municípios do estado.</li>
+                    <li>Redução de indicadores de violência contra o idoso através de análise de dados e políticas de prevenção.</li>
+                    <li>Coordenação de equipes multidisciplinares e construção de um banco de dados estadual para monitoramento contínuo de vulnerabilidade.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Analista de Políticas Públicas</span>
+                    <span class="job-date">Mar 2015 – Dez 2016</span>
+                </div>
+                <div class="company">Secretaria de Estado de Cidadania e Justiça | Palmas, TO</div>
+                <ul>
+                    <li>Coordenação de políticas públicas estaduais voltadas à proteção e garantia de direitos da pessoa idosa.</li>
+                    <li>Análise de mais de 100 denúncias formais, identificando padrões estaduais de vulnerabilidade e abuso.</li>
+                    <li>Planejamento de estratégias de prevenção e articulação institucional com 139 prefeituras e redes de proteção.</li>
+                    <li>Gestão de sistemas de dados governamentais para monitoramento contínuo e relatórios interinstitucionais.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Diretor de Serviços de TI</span>
+                    <span class="job-date">Jan 2014 – Jan 2015</span>
+                </div>
+                <div class="company">Câmara Municipal de Paraíso do Tocantins | Paraíso do TO</div>
+                <ul>
+                    <li>Gestão da infraestrutura de TI institucional em todas as secretarias e departamentos.</li>
+                    <li>Implementação de sistemas, suporte técnico e modernização de equipamentos para áreas administrativas e legislativas.</li>
+                    <li>Supervisão da segurança de rede e proteção de dados dos sistemas governamentais.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Professor de Tecnologia e Desenvolvimento Social</span>
+                    <span class="job-date">Jan 2007 – Dez 2017</span>
+                </div>
+                <div class="company">Múltiplas Instituições (SENAI, Microlins, Projetos Sociais) | BA/DF/TO</div>
+                <ul>
+                    <li>Capacitação de mais de 400 jovens para o mercado de trabalho através de programas nacionais de empregabilidade (Projovem).</li>
+                    <li>Instrução em redes de computadores, manutenção de hardware e fundamentos de TI em instituições técnicas.</li>
+                    <li>Desenvolvimento de websites e sistemas institucionais como desenvolvedor web freelancer, base técnica que sustenta a atuação atual em IA e dados.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section class="section">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="edu-item">
+                <div class="edu-degree">Bacharelado em Sistemas de Informação</div>
+                <div class="edu-school">União Educacional de Ensino Superior do Médio Tocantins</div>
+                <div class="edu-date">2004 – 2008</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">Curso de Programador Web</div>
+                <div class="edu-school">IFTO - Instituto Federal de Educação, Ciência e Tecnologia do Tocantins</div>
+                <div class="edu-date">Mar 2021 – Ago 2021</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">Técnico em Processamento de Dados</div>
+                <div class="edu-school">Colégio Estadual Professora Mª de Lourdes Veloso</div>
+                <div class="edu-date">1994 – 1997</div>
+            </div>
+        </section>
+
+        <!-- Certificações -->
+        <section class="section">
+            <h2 class="section-title">Certificações e Cursos Complementares</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li>Inteligência Artificial – Certificação Profissional</li>
+                    <li>Inteligência Artificial – Movimento IA Brasil</li>
+                    <li>Desenvolvimento Low-Code – Workshop OutSystems</li>
+                </ul>
+                <ul>
+                    <li>Inteligência Emocional – Alta Performance</li>
+                    <li>Financial Education Training</li>
+                    <li>Terapeuta Holístico e Espiritualidade (IBTERAPIAS / ULE)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section class="section">
+            <h2 class="section-title">Idiomas</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li><strong>Português:</strong> Nativo</li>
+                    <li><strong>Inglês:</strong> Intermediário / Conversacional</li>
+                </ul>
+                <ul>
+                    <li><strong>Espanhol:</strong> Básico</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
