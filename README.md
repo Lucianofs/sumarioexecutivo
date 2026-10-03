@@ -26,7 +26,7 @@ O hub central (`index.html`) atua como a "capa" que direciona estrategicamente p
 | **💼 LinkedIn** | `/linkedin` | Identidade profissional pública, validação de mercado e networking. |
 | **🚀 Portfólio** | `/portfolio` | Prova de amplitude. Casos de sucesso, projetos reais e impacto mensurável. |
 | **📄 Currículo Executivo** | `/curriculo-executivo` | Documento de 1 página, alto impacto visual. Para envio rápido e direto a decisores. |
-| **🎯 Currículo ATS (BR)** | `/curriculo-ats` | Documento otimizado para sistemas de rastreamento (ATS) de vagas específicas no Brasil. |
+| **🎯 Currículo ATS (BR)** | `/curriculo-ats-nacional` | Documento otimizado para sistemas de rastreamento (ATS) de vagas específicas no Brasil. |
 | **🌍 Currículo ATS (Global)**| `/curriculo-ats-internacional`| Versão adaptada cultural e linguisticamente para oportunidades e consultorias internacionais. |
 
 ---
